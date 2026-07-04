@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheese People</title>
+    <link rel="shortcut icon" alt="Favicon" href="../assets/img/queso.gif" type="image/x-icon">
+    <meta name="author" content="Cheese People">
+    <meta name="description" content="Cheese People, tienda de quesos artesanales en Envigado, Antioquia">
+    <meta name="keywords" content="queso, quesos, artesanal, tienda, Envigado, Antioquia">
+    <meta name="theme-color" content="#071626">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-traslucent">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body class="bg-dark text-light" style="background-color:#071626 !important;">
+
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark border-bottom border-3 sticky-top" style="background-color:#04111f; border-color:#1d4ed8 !important;">
+            <div class="container-fluid">
+                <img src="../assets/img/queso.gif" alt="Logo Cheese People" class="me-2" style="width:36px; height:36px; object-fit:contain;">
+                <a class="navbar-brand fw-bold fs-4" href="login.html" style="color:#7dd3fc; letter-spacing:2px;">Cheese People</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item fs-5 px-2">
+                            <a class="nav-link" href="login.html"><i class="bi bi-house-door-fill"></i> Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown fs-5 px-2">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-person-circle"></i> Mi cuenta
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0" aria-labelledby="navbarDropdown" style="background-color:#0b2036;">
+                                <li><a class="dropdown-item" href="cliente.html" style="color:#7dd3fc !important;"><i class="bi bi-calendar-check-fill me-2"></i>Panel de cliente</a></li>
+                                <li><a class="dropdown-item" href="admin.html"><i class="bi bi-speedometer2 me-2"></i>Panel de tienda</a></li>
+                                <li><hr class="dropdown-divider" style="border-color:#1d4ed8;"></li>
+                                <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-left me-2"></i>Salir</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <div class="alert alert-warning alert-dismissible fade show rounded-4" role="alert">
+            <i class="bi bi-exclamation-triangle-fill me-2"></i>
+            Recuerda revisar la fecha de entrega de tus pedidos de queso y conservarlos refrigerados.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <div class="card border-0 rounded-4 p-4 mb-4" style="background-color:#0b2036;">
+            <div class="card-body d-flex flex-column flex-md-row align-items-center gap-4">
+                <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width:110px; height:110px; background-color:#12385a;">
+                    <i class="bi bi-person-fill" style="font-size:3.5rem; color:#7dd3fc;"></i>
+                </div>
+                <div class="text-center text-md-start">
+                    <h2 class="h4 fw-bold text-light mb-1">Camilo Herrera</h2>
+                    <p class="text-secondary small mb-1"><i class="bi bi-envelope-fill me-2"></i>camilo.herrera@cheesepeople.com</p>
+                    <p class="text-secondary small mb-0"><i class="bi bi-geo-alt-fill me-2"></i>Envigado, Antioquia</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-0 rounded-4 p-4" style="background-color:#0b2036;">
+            <div class="card-body">
+                <h2 class="h5 fw-bold mb-3 text-light">Mis Pedidos</h2>
+                <ul class="nav nav-pills mb-3" id="inscripcionesTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="activos-tab" data-bs-toggle="pill" data-bs-target="#activos" type="button" role="tab" style="background-color:#38bdf8; color:#04111f;">Activos</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link text-light" id="historial-tab" data-bs-toggle="pill" data-bs-target="#historial" type="button" role="tab">Historial</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="inscripcionesTabContent">
+                    <div class="tab-pane fade show active" id="activos" role="tabpanel">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color:#0b2036; color:#fff; border-color:#12385a;">
+                                Tabla de quesos maduros - 12 de julio, 3:00 PM
+                                <span class="badge bg-success">Confirmado</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color:#0b2036; color:#fff; border-color:#12385a;">
+                                Queso campesino fresco - 20 de julio, 10:00 AM
+                                <span class="badge bg-warning text-dark">Pendiente</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="historial" role="tabpanel">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color:#0b2036; color:#fff; border-color:#12385a;">
+                                Queso mozzarella artesanal - 2 de junio
+                                <span class="badge" style="background-color:#38bdf8; color:#04111f;">Entregado</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color:#0b2036; color:#fff; border-color:#12385a;">
+                                Queso gouda ahumado - 14 de mayo
+                                <span class="badge" style="background-color:#38bdf8; color:#04111f;">Entregado</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-light py-4 mt-5 border-top border-3" style="background-color:#04111f; border-color:#1d4ed8 !important;">
+        <div class="container text-center">
+            <p class="text-secondary small mb-0">&copy; 2026 Cheese People. Quesos artesanales para compartir.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
