@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheese People</title>
+    <link rel="shortcut icon" alt="Favicon" href="../assets/img/queso.gif" type="image/x-icon">
+    <meta name="author" content="Cheese People">
+    <meta name="description" content="Cheese People, tienda de quesos artesanales en Itagui, Medellin">
+    <meta name="keywords" content="queso, quesos, artesanal, tienda, Itagui, Medellin">
+    <meta name="theme-color" content="#071626">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-traslucent">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body class="bg-dark text-light" style="background-color:#071626 !important;">
+
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark border-bottom border-3 sticky-top" style="background-color:#04111f; border-color:#1d4ed8 !important;">
+            <div class="container-fluid">
+                <img src="../assets/img/queso.gif" alt="Logo Cheese People" class="me-2" style="width:36px; height:36px; object-fit:contain;">
+                <a class="navbar-brand fw-bold fs-4" href="login.html" style="color:#7dd3fc; letter-spacing:2px;">Cheese People</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item fs-5 px-2">
+                            <a class="nav-link" href="index.html"><i class="bi bi-house-door-fill"></i> Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown fs-5 px-2">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-person-circle"></i> Mi cuenta
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0" aria-labelledby="navbarDropdown" style="background-color:#0b2036;">
+                                <li><a class="dropdown-item" href="index.html"><i class="bi bi-box-arrow-in-right me-2"></i>Iniciar sesión</a></li>
+                                <li><a class="dropdown-item" href="registro.html"><i class="bi bi-person-plus-fill me-2"></i>Registro</a></li>
+                                <li><a class="dropdown-item" href="recuperar.html" style="color:#7dd3fc !important;"><i class="bi bi-key-fill me-2"></i>Recuperar contraseña</a></li>
+                                <li><hr class="dropdown-divider" style="border-color:#1d4ed8;"></li>
+                                <li><a class="dropdown-item" href="cliente.html"><i class="bi bi-calendar-check-fill me-2"></i>Panel de cliente</a></li>
+                                <li><a class="dropdown-item" href="admin.html"><i class="bi bi-speedometer2 me-2"></i>Panel de tienda</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5 d-flex justify-content-center align-items-center" style="min-height:70vh;">
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card border-0 rounded-4 p-4 shadow-sm" style="background-color:#0b2036;">
+                <div class="card-body">
+                    <div class="text-center mb-4">
+                        <i class="bi bi-key-fill fs-1" style="color:#7dd3fc;"></i>
+                        <h2 class="h3 fw-bold mt-2 text-light">Recuperar Contraseña</h2>
+                        <p class="text-secondary small">Ingresa tu correo para recuperar el acceso a tus pedidos</p>
+                    </div>
+                    <form class="needs-validation" action="index.html">
+                        <div class="mb-2">
+                            <label for="recCorreoValido" class="form-label text-secondary small">Correo electrónico</label>
+                            <input type="email" class="form-control is-valid" id="recCorreoValido" value="natalia.vargas@cheesepeople.com">
+                            <div class="valid-feedback">Correo verificado correctamente.</div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="recCorreoInvalido" class="form-label text-secondary small">Confirmar correo</label>
+                            <input type="email" class="form-control is-invalid" id="recCorreoInvalido" value="natalia.varga@cheesepeople.com">
+                            <div class="invalid-feedback">Correo no encontrado.</div>
+                        </div>
+                        <button type="submit" class="btn w-100 py-2 fw-bold" style="background-color:#38bdf8; color:#04111f;">Enviar enlace</button>
+                    </form>
+                    <p class="text-center text-secondary small mt-4 mb-0">
+                        <a href="index.html" style="color:#7dd3fc;">Volver a inicio de sesión</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-light py-4 mt-5 border-top border-3" style="background-color:#04111f; border-color:#1d4ed8 !important;">
+        <div class="container text-center">
+            <p class="text-secondary small mb-0">&copy; 2026 Cheese People. Quesos artesanales para compartir.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
